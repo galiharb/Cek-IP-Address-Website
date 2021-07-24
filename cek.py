@@ -1,11 +1,11 @@
 import socket
 
-with open('diskominfodomain.txt') as f:
+with open('domain.txt') as f:
     lines = [line.rstrip() for line in f]
 
-for subdomain in lines:
+for domain in lines:
     try:
-        ip = socket.gethostbyname(subdomain)
-        print subdomain+" | "+ip
+        ip = socket.gethostbyname(domain)
+        print domain+" | "+ip
     except:
-        print subdomain+" | Tidak Ditemukan"
+        print domain+" | Tidak Ditemukan"
